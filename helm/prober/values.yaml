@@ -1,0 +1,4 @@
+deployment:
+  namespace: default
+
+podInfoEndpoint: "http://frontend-podinfo.podinfo:9898/"
