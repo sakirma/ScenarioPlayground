@@ -6,6 +6,7 @@
 #   [ ] research what cilium service mesh offers.
 # [ ] connect two services with go code using TCP connection
 #   [ ] connect with a different service if the current one is dead.
+# [ ] Check out about Kafka.
 
 
 ./kind/kind.sh ./kind/kind-cluster.yaml
@@ -13,6 +14,6 @@
 ./podinfo/podinfo.sh
 
 ./app/build-push.sh
-./app/deploy.sh
+./helm/apply.sh
 
 cloud-provider-kind
