@@ -1,0 +1,13 @@
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: "team-a-namespace"
+  namespace: "team-a"
+spec:
+  description: "denies all network communication to namespace team-a"
+  endpointSelector: {}
+  ingress:
+    - {}
+    - fromEndpoints:
+        - matchLabels:
+            io.kubernetes.pod.namespace: team-a
