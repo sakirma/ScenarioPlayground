@@ -4,8 +4,7 @@
 # [-] -istio- *won't install it since EBPF and Cilium can outperform istio.
 # [x] I want to connect some services with each other
 #   [x] research what cilium service mesh offers.
-# [ ] connect two services with go code using TCP connection
-#   [ ] connect with a different service if the current one is dead.
+# [x] connect two services with go code using TCP connection
 # [ ] Check out about Kafka.
 
 
@@ -15,5 +14,7 @@
 
 ./app/build-push.sh
 ./helm/apply.sh
+
+./kafka/apply.sh
 
 cloud-provider-kind
